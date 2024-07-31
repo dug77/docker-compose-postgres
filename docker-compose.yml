@@ -6,7 +6,7 @@ services:
     ports:
       - 15432:5432
     env_file:
-      - .env
+      - stack.env
     networks:
       - postgres-network
     volumes:
@@ -18,7 +18,7 @@ services:
     ports:
       - 15433:80
     env_file:
-      - .env
+      - stack.env
     depends_on:
       - database
     networks:
